@@ -1,0 +1,16 @@
+.header {
+  position: sticky;
+  top: 0;
+  background-color: light-dark(var(--mantine-color-white), var(--mantine-color-body));
+  z-index: var(--mantine-z-index-app);
+}
+
+.footer {
+  position: sticky;
+  bottom: 0;
+  background-color: light-dark(var(--mantine-color-white), var(--mantine-color-body));
+  border-top: 1px solid light-dark(var(--mantine-color-gray-4), var(--mantine-color-dark-4));
+  padding: var(--mantine-spacing-sm);
+  margin-top: var(--mantine-spacing-sm);
+  z-index: var(--mantine-z-index-app);
+}

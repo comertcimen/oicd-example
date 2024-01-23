@@ -1,0 +1,19 @@
+.responsiveContainer {
+  max-width: 90%;
+
+  @media (max-width: 75em) {
+    max-width: rem(1320);
+  }
+
+  @media (max-width: 62em) {
+    max-width: 90%;
+  }
+
+  @media (max-width: 48em) {
+    max-width: 98%;
+  }
+
+  @media (max-width: 36em) {
+    max-width: 98%;
+  }
+}

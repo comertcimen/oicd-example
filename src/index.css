@@ -1,0 +1,23 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-8));
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+  line-height: var(--mantine-line-height);
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
