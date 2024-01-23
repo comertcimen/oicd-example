@@ -1,3 +1,4 @@
+import { getInitials } from "@/utils"
 import {
   Avatar,
   Box,
@@ -11,10 +12,12 @@ import {
   useMantineColorScheme,
 } from "@mantine/core"
 import { IconChevronRight, IconLogout } from "@tabler/icons-react"
+import { useAuth } from "oidc-react"
 import classes from "./User.module.scss"
 
 export const User = () => {
   const { colorScheme, setColorScheme } = useMantineColorScheme()
+  const { userData, signOutRedirect } = useAuth()
 
   return (
     <Menu
@@ -30,13 +33,13 @@ export const User = () => {
         <Box className={classes.container}>
           <UnstyledButton className={classes.button}>
             <Group style={{ flexWrap: "nowrap" }}>
-              <Avatar radius="xl">MM</Avatar>
+              <Avatar radius="xl">{getInitials(userData?.profile.name || "")}</Avatar>
               <Box style={{ flex: 1 }}>
                 <Text size="sm" fw={500}>
-                  Max Mustermann
+                  {userData?.profile.name}
                 </Text>
                 <Text c="dimmed" size="xs">
-                  max@mustermann.de
+                  {userData?.profile.email}
                 </Text>
               </Box>
 
@@ -64,6 +67,7 @@ export const User = () => {
         <Menu.Item
           color="red"
           leftSection={<IconLogout style={{ width: rem(14), height: rem(14) }} />}
+          onClick={() => signOutRedirect()}
         >
           Logout
         </Menu.Item>

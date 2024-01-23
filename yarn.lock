@@ -1895,6 +1895,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"crypto-js@npm:^4.1.1":
+  version: 4.2.0
+  resolution: "crypto-js@npm:4.2.0"
+  checksum: 8fbdf9d56f47aea0794ab87b0eb9833baf80b01a7c5c1b0edc7faf25f662fb69ab18dc2199e2afcac54670ff0cd9607a9045a3f7a80336cccd18d77a55b9fdf0
+  languageName: node
+  linkType: hard
+
 "cssesc@npm:^3.0.0":
   version: 3.0.0
   resolution: "cssesc@npm:3.0.0"
@@ -3479,6 +3486,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jwt-decode@npm:^3.1.2":
+  version: 3.1.2
+  resolution: "jwt-decode@npm:3.1.2"
+  checksum: a951547946b5e8b1d9df818152d6b1dbaf13eebb3a6e6daceedf888968f5d255959852c8188aae2c825dc9104a99d25cb6c23f25d76545d1aa0315b968b6912e
+  languageName: node
+  linkType: hard
+
 "klona@npm:^2.0.6":
   version: 2.0.6
   resolution: "klona@npm:2.0.6"
@@ -3948,6 +3962,28 @@ __metadata:
     define-properties: "npm:^1.2.0"
     es-abstract: "npm:^1.22.1"
   checksum: e869d6a37fb7afdd0054dea49036d6ccebb84854a8848a093bbd1bc516f53e690bba88f0bc3e83fdfa74c601469ee6989c9b13359cda9604144c6e732fad3b6b
+  languageName: node
+  linkType: hard
+
+"oidc-client-ts@npm:2.2.4":
+  version: 2.2.4
+  resolution: "oidc-client-ts@npm:2.2.4"
+  dependencies:
+    crypto-js: "npm:^4.1.1"
+    jwt-decode: "npm:^3.1.2"
+  checksum: eb7fb8fbe28f8aaff4789edbd9400dee6c06438c21d541b0fcd3b8837a5f4c895b8714eb77c8ae38661df083a1bc73331c0cd25c9f7ad3e0312c93bc8868da49
+  languageName: node
+  linkType: hard
+
+"oidc-react@npm:^3.2.2":
+  version: 3.2.2
+  resolution: "oidc-react@npm:3.2.2"
+  dependencies:
+    oidc-client-ts: "npm:2.2.4"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.0 || || ^17.0.0 ||  ^18.0.0
+  checksum: 15fe0f439513e35ec19d177548064b93d2ab7934be7f8ed28e2b5b80e31a88a90f0ab0b2f5ec9f70f712366e897aaeb88e493e84f902fce91ae4c4c5ad1c0d3c
   languageName: node
   linkType: hard
 
@@ -5383,6 +5419,7 @@ __metadata:
     eslint-plugin-react-refresh: "npm:^0.4.4"
     localforage: "npm:^1.10.0"
     match-sorter: "npm:^6.3.3"
+    oidc-react: "npm:^3.2.2"
     postcss: "npm:^8.4.32"
     postcss-preset-mantine: "npm:1.12.3"
     postcss-simple-vars: "npm:^7.0.1"

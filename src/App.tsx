@@ -5,6 +5,7 @@ import { ModalsProvider } from "@mantine/modals"
 import { QueryClientProvider } from "@tanstack/react-query"
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools"
 import { Toaster } from "./components"
+import { AuthProvider, OicdProvider } from "./features/auth/components"
 import { Router } from "./router"
 import { queryClient } from "./services/api"
 import { useAppearanceStore } from "./store/appearanceStore"
@@ -15,11 +16,15 @@ export default function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <MantineProvider theme={theme}>
-        <ModalsProvider modalProps={{ centered: true }}>
-          <Toaster />
-          <Router />
-          <ReactQueryDevtools initialIsOpen={false} />
-        </ModalsProvider>
+        <OicdProvider>
+          <AuthProvider>
+            <ModalsProvider modalProps={{ centered: true }}>
+              <Toaster />
+              <Router />
+              <ReactQueryDevtools initialIsOpen={false} />
+            </ModalsProvider>
+          </AuthProvider>
+        </OicdProvider>
       </MantineProvider>
     </QueryClientProvider>
   )
